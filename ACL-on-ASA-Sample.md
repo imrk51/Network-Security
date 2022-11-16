@@ -69,3 +69,6 @@ access-group OUT-In-Allow in interface outside
 - Provides security as the administrator can configure the access list according to the needs and deny the unwanted packets from entering the network.
 - Provides control over the traffic as it can permit or deny according to the need of the network.- 
 
+
+### More Info. here:
+https://study-ccna.com/types-of-acls/
