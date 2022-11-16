@@ -17,7 +17,8 @@ Types of ACL:
 Sample ACL:
 
 - ACL to allow tcp traffic from outside network to inside network using extended ACL:
-- 
+
+
 ```
 int Gig 0
 nameif Outside
