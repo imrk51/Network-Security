@@ -44,5 +44,28 @@ access-list OUT-In-Allow extended permit tcp object OutsideNet object InsideNet
 access-group OUT-In-Allow in interface outside
 ```
 
+---------------
+## Also, there are two categories of access-list:  
 
+### Numbered access-list
+– These are the access list that cannot be deleted specifically once created i.e if we want to remove any rule from an Access-list then this is not permitted in the case of the numbered access list. If we try to delete a rule from the access list then the whole access list will be deleted. The numbered access-list can be used with both standard and extended access lists. 
+ 
+### Named access list 
+– In this type of access list, a name is assigned to identify an access list. It is allowed to delete a named access list, unlike numbered access list. Like numbered access lists, these can be used with both standards and extended access lists. 
+ 
+## Rules for ACL – 
+
+- The standard Access-list is generally applied close to the destination (but not always).
+- The extended Access-list is generally applied close to the source (but not always).
+- We can assign only one ACL per interface per protocol per direction, i.e., only one inbound and outbound ACL is permitted per interface.
+- We can’t remove a rule from an Access-list if we are using numbered Access-list. If we try to remove a rule then the whole ACL will be removed. If we are using named access lists then we can delete a specific rule.
+- Every new rule which is added to the access list will be placed at the bottom of the access list therefore before implementing the access lists, analyses the whole scenario carefully.
+- As there is an implicit deny at the end of every access list, we should have at least a permit statement in our Access-list otherwise all traffic will be denied.
+- Standard access lists and extended access lists cannot have the same name. 
+ 
+## Advantages of ACL – 
+
+- Improve network performance.
+- Provides security as the administrator can configure the access list according to the needs and deny the unwanted packets from entering the network.
+- Provides control over the traffic as it can permit or deny according to the need of the network.- 
 
